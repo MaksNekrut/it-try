@@ -1,0 +1,18 @@
+{
+  "primary": "274px",
+  "secondary": "270px",
+  "selected": "292px",
+  "shortInfo": "362px",
+  "fullInfo": "758px",
+  "desktopBoard": "1494px",
+  "nameplatePrimary": "154px",
+  "nameplateSecondary": "126px",
+  "nameplateSelected": "134px",
+  "nameplateTriangle": "72px",
+  "nameplateWithText": "362px",
+  "rg": "12px",
+  "md": "16px",
+  "xmd": "20px",
+  "lg": "32px",
+  "round": "50%"
+}
