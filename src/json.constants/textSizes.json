@@ -5,6 +5,7 @@
   "regular": "16px",
   "xregular": "18px",
   "large": "20px",
-  "xlarge": "24px",
-  "big": "32px"
+  "xslarge": "24px",
+  "xllarge": "32px",
+  "big": "40px"
 }

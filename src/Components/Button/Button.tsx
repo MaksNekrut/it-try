@@ -1,11 +1,36 @@
 import React from 'react';
-import StyledButton from './Button.styled';
-import {ICommonText} from '@root/types';
+import {StyledButton} from './Button.styled';
+import {IButton} from '@root/types';
 
-const Button = ({ text }:ICommonText) => {
+type IProps = {
+	buttonText: string | React.ReactNode
+}
+
+const Button = ({
+	buttonText,
+	background,
+	color,
+	radius,
+	indent,
+	align,
+	size,
+	margin,
+	weight,
+	width
+	}:IButton & IProps) => {
 	return (
-		<StyledButton color={'white'} weight={'lg'} background={'darkBlue'} size={'large'}>
-			{ text }
+		<StyledButton
+			color={color}
+			weight={weight}
+			background={background}
+			size={size}
+			radius={radius}
+			indent={indent}
+			align={align}
+			margin={margin}
+			width={width}
+		>
+			{ buttonText }
 		</StyledButton>
 	);
 };

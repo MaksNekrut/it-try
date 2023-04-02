@@ -25,10 +25,13 @@ module.exports = {
 				exclude: '/node_modules/'
 			},
 			{
-				test: /\.(svg|png|gif|jpg)$/,
-				exclude: /fonts/,
-				loader: 'file-loader'
-			}
+				test: /\.(png|jp(e*)g|gif)$/,
+				type: "asset/images",
+			},
+			{
+				test: /\.svg$/,
+				use: ['@svgr/webpack'],
+			},
 		]
 	},
 	resolve: {

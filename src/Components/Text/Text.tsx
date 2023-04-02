@@ -1,10 +1,19 @@
 import React from 'react';
-import StyledText from './Text.styled';
-import { ICommonText } from '@root/types';
+import { StyledText } from "@/Components/Text/Text.styled";
+import { IText } from '@root/types';
 
-const Text = ({ text }:ICommonText) => {
+type IProps = {
+	text: string
+}
+
+const Text = ({ text, color, weight, size, align }:IText & IProps) => {
 	return (
-		<StyledText color={'green'} weight={'xlg'} size={'xlarge'} align={'start'}>
+		<StyledText
+			color={color}
+			weight={weight}
+			size={size}
+			align={align}
+		>
 			{ text }
 		</StyledText>
 	);

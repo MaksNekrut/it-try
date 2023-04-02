@@ -5,6 +5,7 @@ import borders from '@/json.constants/borders.json';
 import textWeight from '@/json.constants/textWeight.json';
 
 export interface IButton {
+    width?: string;
     background?: keyof typeof colors;
     indent?: keyof typeof indents;
     color?: keyof typeof colors;
@@ -13,6 +14,18 @@ export interface IButton {
     size?: keyof typeof textSizes;
     weight?: keyof typeof textWeight
     margin?: string;
+}
+
+export interface IFlexContainer {
+    direction?: 'row' | 'column';
+    align?: string;
+    justify?: string;
+    wrap?: 'wrap' | 'nowrap';
+    background?: keyof typeof colors;
+    gap?: keyof typeof indents;
+    radius?: keyof typeof borders;
+    margin?: keyof typeof indents;
+    padding?: keyof typeof indents;
 }
 
 export interface ICommonText {
