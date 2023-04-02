@@ -1,6 +1,5 @@
-import React from "react";
-import styled from "styled-components";
-import colors from "@/json.constants/colors.json";
+import styled from 'styled-components';
+import colors from '@/json.constants/colors.json';
 
 export const CheckboxContainer = styled.div`
   display: inline-block;
@@ -53,5 +52,5 @@ export const StyledSpan = styled.span`
       background-position: center center;
       background-size: 50% 50%;
     }
-`
+`;
 

@@ -1,8 +1,8 @@
-import colors from "@/json.constants/colors.json"
-import indents from "@/json.constants/indents.json"
-import textSizes from "@/json.constants/textSizes.json"
-import borders from "@/json.constants/borders.json"
-import textWeight from "@/json.constants/textWeight.json"
+import colors from '@/json.constants/colors.json';
+import indents from '@/json.constants/indents.json';
+import textSizes from '@/json.constants/textSizes.json';
+import borders from '@/json.constants/borders.json';
+import textWeight from '@/json.constants/textWeight.json';
 
 export interface IButton {
     background?: keyof typeof colors;

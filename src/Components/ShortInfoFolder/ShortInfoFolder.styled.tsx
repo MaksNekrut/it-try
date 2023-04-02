@@ -1,12 +1,12 @@
-import styled from "styled-components";
-import colors from "@/json.constants/colors.json";
-import borders from "@/json.constants/borders.json";
+import styled from 'styled-components';
+import colors from '@/json.constants/colors.json';
+import borders from '@/json.constants/borders.json';
 
 export const StyledShortInfoWrapper = styled.div`
     width: 362px;
     height: 215px;
     position: relative;
-`
+`;
 export const StyledShortInfoFolder = styled.div`
     position: absolute;
     top: 37px;
@@ -16,7 +16,7 @@ export const StyledShortInfoFolder = styled.div`
     border-radius: ${borders.xmd};
     border: 2px solid ${colors.darkBlue};
     background: ${colors.white};
-`
+`;
 
 export const StyledShortInfoFolderNameplate = styled.div`
     position: absolute;
@@ -29,4 +29,4 @@ export const StyledShortInfoFolderNameplate = styled.div`
     border: 2px solid ${colors.darkBlue};
     background: ${colors.darkBlue};
     overflow: hidden;
-`
+`;

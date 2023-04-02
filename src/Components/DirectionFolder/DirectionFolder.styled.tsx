@@ -1,12 +1,12 @@
-import styled from "styled-components";
-import colors from "@/json.constants/colors.json";
-import borders from "@/json.constants/borders.json";
+import styled from 'styled-components';
+import colors from '@/json.constants/colors.json';
+import borders from '@/json.constants/borders.json';
 
 export const StyledFolderWrapper = styled.div`
     width: 273px;
     height: 160px;
     position: relative;
-`
+`;
 export const StyledDirectionFolder = styled.div`
     position: absolute;
     top: 17px;
@@ -16,7 +16,7 @@ export const StyledDirectionFolder = styled.div`
     border-radius: ${borders.xmd};
     border: 2px solid ${colors.darkBlue};
     background: ${colors.yellow};
-`
+`;
 
 export const StyledDirectionFolderNameplate = styled.div`
     position: absolute;
@@ -27,4 +27,4 @@ export const StyledDirectionFolderNameplate = styled.div`
     border-radius: ${borders.sm};
     border: 2px solid ${colors.darkBlue};
     background: ${colors.lightYellow};
-`
+`;
