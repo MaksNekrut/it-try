@@ -16,7 +16,8 @@ const Button = ({
 	size,
 	margin,
 	weight,
-	width
+	width,
+	onClick,
 	}:IButton & IProps) => {
 	return (
 		<StyledButton
@@ -29,6 +30,7 @@ const Button = ({
 			align={align}
 			margin={margin}
 			width={width}
+			onClick={onClick}
 		>
 			{ buttonText }
 		</StyledButton>

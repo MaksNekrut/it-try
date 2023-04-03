@@ -14,6 +14,7 @@ export interface IButton {
     size?: keyof typeof textSizes;
     weight?: keyof typeof textWeight
     margin?: string;
+    onClick?: () => void;
 }
 
 export interface IFlexContainer {
