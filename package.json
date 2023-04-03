@@ -28,10 +28,13 @@
     "@typescript-eslint/parser": "^5.57.0",
     "babel-loader": "^9.1.2",
     "bundle-loader": "^0.5.6",
+    "css-loader": "^6.7.3",
     "eslint": "^8.37.0",
     "eslint-plugin-react": "^7.32.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "style-loader": "^3.3.2",
     "stylelint": "^15.4.0",
     "stylelint-config-standard-scss": "^7.0.1",
     "ts-loader": "^9.4.2",
@@ -48,6 +51,7 @@
     "@types/react-dom": "^18.0.11",
     "@types/styled-components": "^5.1.26",
     "react": "^18.2.0",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.9"
   }

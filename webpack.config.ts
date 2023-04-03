@@ -2,6 +2,7 @@ import * as path from 'path';
 import * as webpack from 'webpack';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 	mode: 'development',
@@ -15,6 +16,7 @@ module.exports = {
 			template: path.join(__dirname, 'src', 'index.html'),
 			favicon: './src/assets/images/favicon.ico'
 		}),
+		new MiniCssExtractPlugin(),
 		new webpack.HotModuleReplacementPlugin()
 	],
 	module: {
@@ -25,12 +27,20 @@ module.exports = {
 				exclude: '/node_modules/'
 			},
 			{
+				test: /\.css$/i,
+				use: ["style-loader", "css-loader"],
+			},
+			{
 				test: /\.(png|jp(e*)g|gif)$/,
-				type: "asset/images",
+				type: "assets/images",
 			},
 			{
 				test: /\.svg$/,
 				use: ['@svgr/webpack'],
+			},
+			{
+				test: /\.(woff2?|eot|ttf|otf)$/i,
+				type: 'assets/fonts',
 			},
 		]
 	},

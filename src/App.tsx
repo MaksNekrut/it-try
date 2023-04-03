@@ -1,5 +1,6 @@
 import React from 'react';
 import Main from "@/Pages/main/Main";
+import '@root/style.css';
 
 const url = 'http://localhost:4000/v1/courses';
 
