@@ -52,3 +52,26 @@ export interface IFolderWrapper {
     background: keyof typeof colors;
 
 }
+
+interface ICourse {
+    id: number;
+    direction: string;
+    subdirection: string;
+    school: string;
+    title: string;
+    description:string;
+    skills: string;
+    price: number;
+    duration: string;
+    online: boolean;
+    city: string;
+    levels: string;
+    certificate: boolean;
+    isfree: boolean;
+    languages: string;
+    url: string;
+}
+
+export interface ICoursesData {
+    courses: ICourse[]
+}
