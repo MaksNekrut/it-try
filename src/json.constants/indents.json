@@ -9,5 +9,6 @@
   "rg": "32px",
   "lg": "64px",
   "xlg": "100px",
-  "xxlg": "128px"
+  "xxlg": "128px",
+  "big": "240px"
 }

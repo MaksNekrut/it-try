@@ -1,11 +1,18 @@
 import styled from 'styled-components';
 import colors from '@/json.constants/colors.json';
 import borders from '@/json.constants/borders.json';
-
+import indents from '@/json.constants/indents.json'
 export const StyledFolderWrapper = styled.div`
     width: 273px;
     height: 160px;
     position: relative;
+`;
+export const StyledContainer = styled.div`
+  padding: ${indents.lg};
+  display: flex;
+  flex-wrap: wrap;
+  gap: ${indents.big};
+  justify-content: space-around;
 `;
 export const StyledDirectionFolder = styled.div`
     position: absolute;
@@ -17,7 +24,6 @@ export const StyledDirectionFolder = styled.div`
     border: 2px solid ${colors.darkBlue};
     background: ${colors.yellow};
 `;
-
 export const StyledDirectionFolderNameplate = styled.div`
     position: absolute;
     top: 0px;

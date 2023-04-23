@@ -5,7 +5,6 @@ import {IButton} from '@root/types';
 type IProps = {
 	buttonText: string | React.ReactNode
 }
-
 const Button = ({
 	buttonText,
 	background,

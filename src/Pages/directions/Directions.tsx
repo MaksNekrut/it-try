@@ -1,14 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useMemo } from "react";
 import { useDispatch } from "react-redux";
 import axios from "axios";
-import store from "@/store";
 import { ICoursesData } from "@root/types";
 import {GET_ALL_COURSES} from "@/store/courses/actionTypes";
+import CourseFolder from "@/Components/CourseFolder/CourseFolder";
 
 export interface IDirectionsProps {}
 
 const Directions: React.FC<IDirectionsProps> = (props) => {
-
     const [data, setData] = useState<ICoursesData | null>(null);
     const [error, setError] = useState<Error | null>(null);
     const dispatch = useDispatch();
@@ -23,19 +22,19 @@ const Directions: React.FC<IDirectionsProps> = (props) => {
                 setError(error)
             })
     }, [dispatch])
-
-
-    if (error) {
+        if (error) {
         return <div>Error: {error.message}</div>;
     } else if (!data) {
         return <div>Loading...</div>;
     } else {
-        const { courses } = data;
-        courses.map(el => {
-           return <div>{el.direction}</div>
-        })
-
+        return (
+            <CourseFolder
+                isNameplateNeeded={ false }
+                isShadowNeeded={true}
+                isWithLabel={true}
+                isMain={true}
+            />
+        )
     }
 }
-
 export default Directions;

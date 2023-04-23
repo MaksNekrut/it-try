@@ -53,7 +53,7 @@ export interface IFolderWrapper {
 
 }
 
-interface ICourse {
+export interface ICourse {
     id: number;
     direction: string;
     subdirection: string;

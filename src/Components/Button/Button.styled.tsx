@@ -7,7 +7,7 @@ import textWeight from '@/json.constants/textWeight.json';
 import { IButton } from '@root/types';
 
 export const StyledButton = styled.button<StyledProps<IButton>>`
-    width: ${({ width }) => width ? width : '100%'};;
+    width: ${({ width }) => width ? width : '100%'};
     background: ${({ background }) => background ? colors[background] : colors['white']};
     border-radius: ${({ radius }) => radius ? borders[radius] : borders['lg']};
     color: ${({ color }) => color ? colors[color] : colors['black']};
