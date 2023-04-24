@@ -37,14 +37,23 @@ export const StyledCourseFolderNameplate = styled.div`
     border: 2px solid ${colors.darkBlue};
     background: ${colors.white};
 `;
-export const StyledLabel = styled.div`
+export const StyledLabel = styled.div<(({isMobile: boolean}))>`
     display: flex;
-    gap: ${indents.xlg};
+    gap: ${({isMobile}) => isMobile ? indents.md : indents.xlg};
     align-items: center;
     justify-content: center;
-    height: 120px;
-    border-bottom: 2px solid ${colors.darkBlue};;
-    border-top-left-radius: ${borders.sm};
-    border-top-right-radius: ${borders.sm};
+    height: ${({isMobile}) => isMobile ? "72px" : "120px"};
+    border-bottom: 2px solid ${colors.darkBlue};
+    border-top: ${({isMobile}) => isMobile ? `2px solid ${colors.darkBlue}` : "none"};
+    border-top-left-radius: ${({isMobile}) => isMobile ? "none" : borders.sm };
+    border-top-right-radius: ${({isMobile}) => isMobile ? "none" : borders.sm };
     background: ${colors.white};
+`
+export const StyledContainerMobile = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: ${indents.md};
 `
