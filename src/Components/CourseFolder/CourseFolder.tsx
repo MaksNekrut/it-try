@@ -1,7 +1,6 @@
 import React from 'react';
 import  { useSelector } from 'react-redux';
 import {
-	StyledContainerMobile,
 	StyledCourseFolder,
 	StyledCourseFolderNameplate,
 	StyledCourseFolderWrapper,
@@ -15,6 +14,7 @@ import DirectionFolder from "@/Components/DirectionFolder/DirectionFolder";
 import { getAllCoursesSelector } from "@/store/courses/selectors";
 import { isMobile } from "react-device-detect";
 import FoldersMobile from "@/assets/images/folder-mobile.svg";
+import ArrowButton from "@/Components/ArrowButton/ArrowButton";
 
 interface IProps {
 	isNameplateNeeded: boolean;
@@ -32,9 +32,7 @@ const CourseFolder = ({isNameplateNeeded = true, isShadowNeeded = false, isWithL
 					<Text text={DIRECTIONS_PAGE_TITLE} size={'large'} weight={'rg'} />
 					<FoldersMobile />
 				</StyledLabel>
-
-					<DirectionFolder coursesList={coursesList} />
-
+				<DirectionFolder coursesList={coursesList} />
 			</>)
 		}
 	}
