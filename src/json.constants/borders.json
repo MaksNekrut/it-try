@@ -9,5 +9,7 @@
   "md": "16px",
   "xmd": "20px",
   "lg": "32px",
+  "xlg": "64px",
+  "bit": "128px",
   "round": "50%"
 }
