@@ -6,6 +6,7 @@ export const StyledCourseFolderWrapper = styled.div<({ isMain?: boolean })>`
     width: ${({ isMain }) => isMain ? '100%' : '282px'};
     min-height: ${({ isMain }) => isMain ? '100%' : '167px'};
     position: relative;
+    cursor: pointer;
 `;
 export const StyledCourseFolder = styled.div<({ isMain: boolean })>`
     position: absolute;

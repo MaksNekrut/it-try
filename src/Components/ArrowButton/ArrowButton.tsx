@@ -4,11 +4,12 @@ import ArrowLeft from "@/assets/images/arrow-left.svg";
 import ArrowTop from "@/assets/images/arrow-top.svg";
 
 type IProps = {
-    isRoundButton: boolean
+    isRoundButton: boolean,
+    onClick: () => void
 }
-const ArrowButton = ({ isRoundButton }:IProps) => {
+const ArrowButton = ({ isRoundButton, onClick }:IProps) => {
     return (<>
-        <StyledArrowButton isRound={isRoundButton}>
+        <StyledArrowButton onClick={onClick} isRound={isRoundButton}>
             { isRoundButton ? <ArrowLeft /> : <ArrowTop /> }
         </StyledArrowButton>
     </>);

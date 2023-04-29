@@ -3,7 +3,18 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 import { ICoursesData } from "@root/types";
 import {GET_ALL_COURSES} from "@/store/courses/actionTypes";
-import CourseFolder from "@/Components/CourseFolder/CourseFolder";
+import {isMobile} from "react-device-detect";
+import {
+    StyledCourseFolder,
+    StyledCourseFolderWrapper,
+    StyledFolderShadow,
+    StyledLabel
+} from "@/Components/CourseFolder/CourseFolder.styled";
+import FoldersMobile from "@/assets/images/folder-mobile.svg";
+import Text from "@/Components/Text/Text";
+import {DIRECTIONS_PAGE_TITLE} from "@root/constants";
+import DirectionFolder from "@/Components/DirectionFolder/DirectionFolder";
+import Folders from "@/assets/images/folders.svg";
 
 export interface IDirectionsProps {}
 
@@ -27,14 +38,31 @@ const Directions: React.FC<IDirectionsProps> = (props) => {
     } else if (!data) {
         return <div>Loading...</div>;
     } else {
-        return (
-            <CourseFolder
-                isNameplateNeeded={ false }
-                isShadowNeeded={true}
-                isWithLabel={true}
-                isMain={true}
-            />
-        )
+            if (isMobile) {
+                return (<>
+                    <StyledLabel isMobile>
+                        <FoldersMobile/>
+                        <Text text={DIRECTIONS_PAGE_TITLE} size={'large'} weight={'rg'}/>
+                        <FoldersMobile/>
+                    </StyledLabel>
+                    <DirectionFolder coursesList={data.courses} />
+                </>)
+            }
+
+            return (
+                <StyledCourseFolderWrapper isMain={true}>
+                    <StyledFolderShadow isMain={true}/>
+                    <StyledCourseFolder isMain={true}>
+                        { <StyledLabel isMobile={false}>
+                            <Folders />
+                            <Text text={DIRECTIONS_PAGE_TITLE} size={'big'} weight={'lg'} />
+                            <Folders />
+                        </StyledLabel>
+                        }
+                        <DirectionFolder coursesList={data.courses}/>
+                    </StyledCourseFolder>
+                </StyledCourseFolderWrapper>
+            );
     }
 }
 export default Directions;

@@ -75,3 +75,11 @@ export interface ICourse {
 export interface ICoursesData {
     courses: ICourse[]
 }
+
+export interface ISUBDIRECTIONS_LIST {
+    "разработка": string[];
+    "Дизайн":  string[];
+    "Английский язык":  string[];
+    "Аналитика":  string[];
+    "Управление":  string[];
+}
