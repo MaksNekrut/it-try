@@ -53,13 +53,13 @@ const Filter = ({
                     <Checkbox label={''} />
                 </StyledCheckbox>
                 : isCheckbox
-                    ? customTitles.map(CheckboxLabel => <Checkbox label={CheckboxLabel} />)
+                    ? customTitles.map((CheckboxLabel, index) => <Checkbox key={index} label={CheckboxLabel} />)
                     : null
             }
             {
                 isOptionsBlock &&
                 <StyledAdditionalElementsBlock>
-                    { customTitles ? customTitles.map(title => <Checkbox label={title} />) : null }
+                    { customTitles ? customTitles.map((title, index) => <Checkbox key={index} label={title} />) : null }
                 </StyledAdditionalElementsBlock>
             }
             { additional && <div>{additional}</div>}

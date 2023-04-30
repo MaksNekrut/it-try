@@ -30,7 +30,6 @@ export const StyledInputContainer = styled.div<({isDouble: boolean})>`
 `;
 
 export const StyledInput = styled.input<({isWide?: boolean})>`
-  width: 100%;
   background: ${({isWide}) => isWide ? colors.white : colors.bgDefault};
   padding-left: ${indents.sm};
   font-size: ${textSizes.regular};
